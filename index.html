@@ -246,7 +246,76 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <!--====================================================
                         PORTFOLIO d.a
     ======================================================-->      
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio"> 
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio2" style="background: white"> 
+      <div class="row my-auto">
+          <div class="col-12">
+            <h2 class="  text-center">Data Analysis - Portfolio</h2>
+            <div class="mb-5 heading-border"></div>
+          </div>
+          <div class="col-md-12">
+            <div class="port-head-cont">
+              <button class="btn btn-general btn-green filter-a" data-filter="all">All</button>
+              <button class="btn btn-general btn-green filter-a" data-filter="consulting">Python</button>
+              <button class="btn btn-general btn-green filter-a" data-filter="finance">R</button>
+              <button class="btn btn-general btn-green filter-a" data-filter="marketing">Tableau</button> 
+            </div>
+          </div>
+        <div class="row my-auto">
+      </div>
+      <div class="col-sm-4 portfolio-item filter-da consulting">
+          <a class="portfolio-link" href="#portfolioModal8" data-toggle="modal">
+              <div class="caption-port">
+                  <div class="caption-port-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                  </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/p-8.jpg" alt="">
+          </a>
+      </div>
+      <div class="col-sm-4 portfolio-item filter-da finance">
+          <a class="portfolio-link" href="#portfolioModal9" data-toggle="modal">
+              <div class="caption-port">
+                  <div class="caption-port-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                  </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/p-9.jpg" alt="">
+          </a>
+      </div>              
+      <div class="col-sm-4 portfolio-item filter-da marketing">
+          <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+              <div class="caption-port">
+                  <div class="caption-port-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                  </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/p-1.jpg" alt="">
+          </a>
+      </div>
+      <div class="col-sm-4 portfolio-item filter-da marketing">
+          <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
+              <div class="caption-port">
+                  <div class="caption-port-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                  </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/p-2.jpg" alt="">
+          </a>
+      </div>
+      <div class="col-sm-4 portfolio-item filter-da finance">
+          <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
+              <div class="caption-port">
+                  <div class="caption-port-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                  </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/p-3.jpg" alt="">
+          </a>
+      </div> 
+  </div>
+</section>
+
+     <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio2"> 
           <div class="row my-auto">
               <div class="col-12">
                 <h2 class="  text-center">Data Analysis - Portfolio</h2>
@@ -302,7 +371,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       <img class="img-fluid" src="img/portfolio/p-7.jpg" alt="">
                   </a>
               </div>
-            </section>
+            </section> -->
         <!--====================================================
                               PORTFOLIO w.dev
          ======================================================-->   
@@ -920,6 +989,37 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         });
         
         if ($(".filter-b").removeClass("active")) {
+          $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+        });
+
+        // SKILLS
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+        });
+    </script> 
+    <script>
+        $(document).ready(function(){
+
+        $(".filter-a").click(function(){
+            var value = $(this).attr('data-filter');
+            if(value == "all")
+            { 
+                $('.filter-da').show('1000');
+            }
+            else
+            { 
+                $(".filter-da").not('.'+value).hide('3000');
+                $('.filter-da').filter('.'+value).show('3000');
+            }
+        });
+        
+        if ($(".filter-a").removeClass("active")) {
           $(this).removeClass("active");
         }
         $(this).addClass("active");
