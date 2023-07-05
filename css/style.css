@@ -256,9 +256,9 @@ a:active {
 /*====================================================
                    PORTFOLIO DA
 ======================================================*/
-/*
 #portfolio{
     padding:100px 0;
+    background: #f0f0f0;
 } 
 
 .port-head-cont{
@@ -380,12 +380,12 @@ a:active {
 
 .portfolio-modal .close-modal .lr {
     /* Safari and Chrome */
- /*   z-index: 1051;
+    z-index: 1051;
     width: 1px;
     height: 75px;
     margin-left: 35px;
     /* IE 9 */
- /*   -webkit-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     background-color: #2C3E50;
@@ -393,11 +393,11 @@ a:active {
 
 .portfolio-modal .close-modal .lr .rl {
     /* Safari and Chrome */
- /*   z-index: 1052;
+    z-index: 1052;
     width: 1px;
     height: 75px;
     /* IE 9 */
-/*    -webkit-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     background-color: #2C3E50;
@@ -413,6 +413,8 @@ a:active {
         display: none;
     }
 }  
+
+
 
 
 /*====================================================
