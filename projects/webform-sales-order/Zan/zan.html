@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Zanhang Pedidos</title>
+    <link rel="stylesheet" type="text/css" href="./zan.css">
+  </head>
+
+  <form action="./orders/" method="post">
+
+    <body>
+
+      <div id="date">Dia/Mes/Ano</div>
+<br>
+      <h1>ZANHANG</h1>
+
+      <div>
+        <select name="localidad" id="localidad">
+          <option value="olavarria" selected>Olavarria</option>
+          <option value="tandil">Tandil</option>
+          <option value="trenquelauquen">Trenque Lauquen</option>
+        </select>
+      </div>
+<br>
+      <div>
+        <select name="clientes" id="clientes"> <!-- script clientes por localidad -->
+          <option value="clienteLocalidad" selected>ClientexLocalidad</option>
+        </select>
+      </div>
+
+<br>
+
+      <fieldset>
+        <legend id="megapackCollapser">COTTON MEGAPACK</legend>
+          <table id="megapackCollapsable" border="1" cellpadding="3%">
+            <tr>
+              <th>Código</th>
+              <th>Bultos</th>
+              <th>Precio x Bulto</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <th><label for="p24" class="cotton">P 24</label></th>
+              <th><input type="number" name="p24" id="p24" min="0"></th>
+              <th id="precioP24"></th>
+              <th id="subtotalP24">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="m24" class="cotton">M 24</label></th>
+              <th><input type="number" name="m24" id="m24" min="0"></th>
+              <th id="precioM24"></th>
+              <th id="subtotalM24">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="g20" class="cotton">G 20</label></th>
+              <th><input type="number" name="g20" id="g20" min="0"></th>
+              <th id="precioG20"></th>
+              <th id="subtotalG20">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="xg18" class="cotton">XG 18</label></th>
+              <th><input type="number" name="xg18" id="xg18" min="0"></th>
+              <th id="precioXg18"></th>
+              <th id="subtotalXg18">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="xxg17" class="cotton">XXG 17</label></th>
+              <th><input type="number" name="xxg17" id="xxg17" min="0"></th>
+              <th id="precioXxg17"></th>
+              <th id="subtotalXxg17">0.00</th>
+            </tr>
+          </table>
+          <table border="1" cellpadding="3%">
+            <tr>
+              <th>Total bultos:</th>
+              <th id="qSubtotalMegapack">0</th>
+            </tr>
+            <tr>
+              <th>Total valor:</th>
+              <th id="pSubtotalMegapack">$0.00</th>
+            </tr>
+          </table>
+        </div>
+      </fieldset>
+<br>
+      <fieldset>
+        <legend id="hiperpackCollapser">COTTON HIPERPACK</legend>
+          <table id="hiperpackCollapsable" border="1" cellpadding="3%">
+            <tr>
+              <th>Código</th>
+              <th>Bultos</th>
+              <th>Precio x Bulto</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <th><label for="p44" class="cotton">P 44</label></th>
+              <th><input type="number" name="p44" id="p44" min="0"></th>
+              <th id="precioP44"></th>
+              <th id="subtotalP44">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="m44" class="cotton">M 44</label></th>
+              <th><input type="number" name="m44" id="m44" min="0"></th>
+              <th id="precioM44"></th>
+              <th id="subtotalM44">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="g38" class="cotton">G 38</label></th>
+              <th><input type="number" name="g38" id="g38" min="0"></th>
+              <th id="precioG38"></th>
+              <th id="subtotalG38">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="xg32" class="cotton">XG 32</label></th>
+              <th><input type="number" name="xg32" id="xg32" min="0"></th>
+              <th id="precioXg32"></th>
+              <th id="subtotalXg32">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="xxg30" class="cotton">XXG 30</label></th>
+              <th><input type="number" name="xxg30" id="xxg30" min="0"></th>
+              <th id="precioXxg30"></th>
+              <th id="subtotalXxg30">0.00</th>
+            </tr>
+          </table>
+          <table border="1" cellpadding="3%">
+            <tr>
+              <th>Total bultos:</th>
+              <th id="qSubtotalHiperpack">0</th>
+            </tr>
+            <tr>
+              <th>Total valor:</th>
+              <th id="pSubtotalHiperpack">$0.00</th>
+            </tr>
+          </table>
+      </fieldset>
+<br>
+      <fieldset>
+        <legend id="pMegapackCollapser">PREMIUM COTTON MEGAPACK</legend>
+          <table id="pMegapackCollapsable" border="1" cellpadding="3%">
+            <tr>
+              <th>Código</th>
+              <th>Bultos</th>
+              <th>Precio x Bulto</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <th><label for="pP30" class="premium">P 30</label></th>
+              <th><input type="number" name="pP30" id="pP30" min="0"></th>
+              <th id="precioPP30">/th>
+              <th id="subtotalPP30">0.00</th>
+            </tr>
+          </table>
+          <table border="1" cellpadding="3%">
+            <tr>
+              <th>Total bultos:</th>
+              <th id="qSubtotalPMegapack">0</th>
+            </tr>
+            <tr>
+              <th>Total valor:</th>
+              <th id="pSubtotalPMegapack">$0.00</th>
+            </tr>
+          </table>
+      </fieldset>
+<br>
+      <fieldset>
+        <legend id="pHiperpackCollapser">PREMIUM COTTON HIPERPACK</legend>
+          <table id="pHiperpackCollapsable" border="1" cellpadding="3%">
+            <tr>
+              <th>Código</th>
+              <th>Bultos</th>
+              <th>Precio x Bulto</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <th><label for="pM52" class="premium">M 52</label></th>
+              <th><input type="number" name="pM52" id="pM52" min="0"></th>
+              <th id="precioPM52"></th>
+              <th id="subtotalPM52">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="pG44" class="premium">G 44</label></th>
+              <th><input type="number" name="pG44" id="pG44" min="0"></th>
+              <th id="precioPG44"></th>
+              <th id="subtotalPG44">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="pXg36" class="premium">XG 36</label></th>
+              <th><input type="number" name="pXg36" id="pXg36" min="0"></th>
+              <th id="precioPXg36"></th>
+              <th id="subtotalPXg36">0.00</th>
+            </tr>
+            <tr>
+              <th><label for="pXxg34" class="premium">XXG 34</label></th>
+              <th><input type="number" name="pXxg34" id="pXxg34" min="0"></th>
+              <th id="precioPXxg34"></th>
+              <th id="subtotalPXxg34">0.00</th>
+            </tr>
+          </table>
+          <table border="1" cellpadding="3%">
+            <tr>
+              <th>Total bultos:</th>
+              <th id="qSubtotalPHiperpack">0</th>
+            </tr>
+            <tr>
+              <th>Total valor:</th>
+              <th id="pSubtotalPHiperpack">$0.00</th>
+            </tr>
+          </table>
+      </fieldset>
+
+    </body>
+<br>
+    <fieldset>
+      <table>
+        <tr>
+          <th>Total bultos:</th>
+          <th id="qTotal">0</th>
+        </tr>
+        <tr>
+          <th>Total valor:</th>
+          <th id="pTotal">$0.00</th>
+        </tr>
+      </table>
+    </fieldset>
+<br>
+    <textarea rows="2" id="observaciones" placeholder="OBSERVACIONES"></textarea>
+<br>
+    <div><input type="submit" class="submit"></div>
+
+  </form>
+
+<br>
+
+  <div><a href="../Sam/sam.html"><button>IR A SAMSENG</button></a></div>
+  <div><a href="../index.html"><button>VOLVER</button></a></div>
+
+<script src="../Zan/zan.js"></script>  
+</html>    
