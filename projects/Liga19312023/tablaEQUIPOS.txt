@@ -1,0 +1,92 @@
+CREATE TABLE equipos AS
+SELECT
+    team_id,
+    team_name,
+    -- Totales
+    SUM(total_games_local) AS total_games_local,
+    SUM(total_games_visitor) AS total_games_visitor,
+    SUM(total_games_local + total_games_visitor) AS total_games,
+    SUM(total_local_wins) AS total_local_wins,
+    SUM(total_local_lose) AS total_local_lose,
+    SUM(total_local_tie) AS total_local_tie,
+    SUM(total_visitor_win) AS total_visitor_win,
+    SUM(total_visitor_lose) AS total_visitor_lose,
+    SUM(total_visitor_tie) AS total_visitor_tie,
+    -- Totales Agregados
+    SUM(total_win) AS total_win,
+    SUM(total_lose) AS total_lose,
+    SUM(total_tie) AS total_tie,
+    -- Goles
+    SUM(total_goal_scored_local) AS total_goal_scored_local,
+    SUM(total_goal_scored_visitor) AS total_goal_scored_visitor,
+    SUM(total_goal_conceded_local) AS total_goal_conceded_local,
+    SUM(total_goal_conceded_visitor) AS total_goal_conceded_visitor,
+    -- Goles agregados
+    SUM(total_goal_scored) AS total_goal_scored,
+    SUM(total_goal_conceded) AS total_goal_conceded,
+    -- Campeonatos
+    'no awards' AS awards
+FROM (
+    SELECT
+        local_team_id AS team_id,
+        local_team AS team_name,
+        -- Totales
+        COUNT(*) AS total_games_local,
+        0 AS total_games_visitor,
+        COUNT(*) AS total_games,
+        SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END) AS total_local_wins,
+        SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END) AS total_local_lose,
+        (COUNT(*) - SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END) 
+        - SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END)) AS total_local_tie,
+        0 AS total_visitor_win,
+        0 AS total_visitor_lose,
+        0 AS total_visitor_tie,
+        -- Totales agregados
+        SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END) + 0 AS total_win,
+        SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END) + 0 AS total_lose,
+        (COUNT(*) - SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END) 
+        - SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END)) + 0 AS total_tie,
+        -- Goles
+        SUM(CASE WHEN local_result > visitor_result THEN local_result ELSE 0 END) AS total_goal_scored_local,
+        0 AS total_goal_scored_visitor,
+        SUM(CASE WHEN local_result < visitor_result THEN visitor_result ELSE 0 END) AS total_goal_conceded_local,
+        0 AS total_goal_conceded_visitor,
+        -- Goles agregados
+        SUM(local_result) AS total_goal_scored,
+        SUM(visitor_result) AS total_goal_conceded
+    FROM partidos
+    GROUP BY local_team_id, local_team
+
+    UNION ALL
+
+    SELECT
+        visitor_team_id AS team_id,
+        visitor_team AS team_name,
+        -- Totales
+        0 AS total_games_local,
+        COUNT(*) AS total_games_visitor,
+        COUNT(*) AS total_games,
+        0 AS total_local_wins,
+        0 AS total_local_lose,
+        0 AS total_local_tie,
+        SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END) AS total_visitor_win,
+        SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END) AS total_visitor_lose,
+        (COUNT(*) - SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END) 
+        - SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END)) AS total_visitor_tie,
+        -- Totales agregados
+        0 AS total_win,
+        0 AS total_lose,
+        (COUNT(*) - SUM(CASE WHEN local_result < visitor_result THEN 1 ELSE 0 END) 
+        - SUM(CASE WHEN local_result > visitor_result THEN 1 ELSE 0 END)) + 0 AS total_tie,
+        -- Goles
+        0 AS total_goal_scored_local,
+        SUM(CASE WHEN local_result < visitor_result THEN visitor_result ELSE 0 END) AS total_goal_scored_visitor,
+        0 AS total_goal_conceded_local,
+        SUM(CASE WHEN local_result > visitor_result THEN local_result ELSE 0 END) AS total_goal_conceded_visitor,
+        -- Goles agregados
+        SUM(visitor_result) AS total_goal_scored,
+        SUM(local_result) AS total_goal_conceded
+    FROM partidos
+    GROUP BY visitor_team_id, visitor_team
+) AS subquery
+GROUP BY team_id, team_name;

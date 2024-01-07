@@ -1,0 +1,15 @@
+-- Contar la cantidad de veces que cada equipo ganó un torneo
+CREATE TEMPORARY TABLE temp_ganadores AS
+SELECT
+    team_name,
+    COUNT(*) AS torneos_ganados
+FROM posiciones
+WHERE posiciones = 1
+GROUP BY team_name;
+
+-- Actualizar la columna "awards" en la tabla "equipos" según el conteo
+UPDATE equipos
+SET awards = COALESCE((SELECT CAST(torneos_ganados AS TEXT) FROM temp_ganadores WHERE team_name = equipos.team_name), '0');
+
+-- Verificar los resultados
+SELECT * FROM equipos;

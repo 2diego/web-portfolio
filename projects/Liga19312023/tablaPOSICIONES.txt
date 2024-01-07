@@ -1,0 +1,48 @@
+-- Crear una tabla temporal con los resultados agrupados por fecha y equipo
+CREATE TEMPORARY TABLE temp_resultados AS
+SELECT
+    p.date_name,
+    p.local_team_id AS team_id,
+    e.team_name,
+    COUNT(*) AS partidos_jugados,
+    SUM(CASE WHEN p.local_result > p.visitor_result THEN 1 ELSE 0 END) AS victorias,
+    SUM(CASE WHEN p.local_result < p.visitor_result THEN 1 ELSE 0 END) AS derrotas,
+    SUM(CASE WHEN p.local_result = p.visitor_result THEN 1 ELSE 0 END) AS empates,
+    SUM(p.local_result) AS goles_a_favor,
+    SUM(p.visitor_result) AS goles_en_contra
+FROM partidos p
+JOIN equipos e ON p.local_team_id = e.team_id
+GROUP BY p.date_name, p.local_team_id, e.team_name
+
+UNION ALL
+
+SELECT
+    p.date_name,
+    p.visitor_team_id AS team_id,
+    e.team_name,
+    COUNT(*) AS partidos_jugados,
+    SUM(CASE WHEN p.local_result < p.visitor_result THEN 1 ELSE 0 END) AS victorias,
+    SUM(CASE WHEN p.local_result > p.visitor_result THEN 1 ELSE 0 END) AS derrotas,
+    SUM(CASE WHEN p.local_result = p.visitor_result THEN 1 ELSE 0 END) AS empates,
+    SUM(p.visitor_result) AS goles_a_favor,
+    SUM(p.local_result) AS goles_en_contra
+FROM partidos p
+JOIN equipos e ON p.visitor_team_id = e.team_id
+GROUP BY p.date_name, p.visitor_team_id, e.team_name;
+
+-- Crear la tabla final de posiciones
+CREATE TABLE posiciones AS
+SELECT
+    t.date_name,
+    t.team_id,
+    t.team_name,
+    ROW_NUMBER() OVER (PARTITION BY t.date_name ORDER BY 3 * SUM(t.victorias) + SUM(t.empates) DESC) AS posiciones,
+    SUM(t.victorias) AS victorias,
+    SUM(t.derrotas) AS derrotas,
+    SUM(t.empates) AS empates,
+    SUM(t.goles_a_favor) AS goles_a_favor,
+    SUM(t.goles_en_contra) AS goles_en_contra,
+    3 * SUM(t.victorias) + SUM(t.empates) AS puntos
+FROM temp_resultados t
+GROUP BY t.date_name, t.team_id, t.team_name
+ORDER BY t.date_name, posiciones;
