@@ -79,67 +79,83 @@ a:active {
 /*==================================================
                     NAV-BAR
 ====================================================*/
-  #sideNav .navbar-nav .nav-item .nav-link {
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 1.4em;
-  }
 
-  .nav-link {
+#sideNav .navbar-nav .nav-item .nav-link {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.4em;
     position: relative;
-    display: inline-block; 
+    text-align: center; /* Center text on mobile */
   }
   
-  .nav-link::after { /* underline */
-    content: ''; 
-    position: absolute; 
-    left: 1.75em;
-    right: 1.75em; 
-    bottom: 0px; 
-    height: 4px; 
-    background-color: #000; 
-    transform: scaleY(0.5); 
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 4px;
+    background-color: #000;
+    width: 0; /* Initially set the width to 0 */
+    transition: width 0.3s ease; /* Add transition for smoother effect */
   }
   
   @media (min-width: 992px) {
-      #sideNav {
-          text-align: center;
-          position: fixed;
-          top: 0;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          width: 17rem;
-          height: 100vh;
-      }
-      #sideNav .navbar-brand {
-          display: flex;
-          margin: auto auto 0;
-          padding: 0.5rem;
-      }
-      #sideNav .navbar-brand .img-profile {
-          max-width: 10rem;
-          max-height: 10rem;
-          border: 0.3rem solid rgba(255, 255, 255, 0.2);
-      }
-      #sideNav .navbar-collapse {
-          display: flex;
-          align-items: flex-start;
-          flex-grow: 0;
-          width: 100%;
-          margin-bottom: auto;
-      }
-      #sideNav .navbar-collapse .navbar-nav {
-          flex-direction: column;
-          width: 100%;
-      }
-      #sideNav .navbar-collapse .navbar-nav .nav-item {
-          display: block;
-      }
-      #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-          display: block;
-      }
+    #sideNav {
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 17rem;
+      height: 100vh;
+    }
+  
+    #sideNav .navbar-brand {
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem;
+    }
+  
+    #sideNav .navbar-brand .img-profile {
+      max-width: 10rem;
+      max-height: 10rem;
+      border: 0.3rem solid rgba(255, 255, 255, 0.2);
+    }
+  
+    #sideNav .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+      width: 100%;
+      margin-bottom: auto;
+    }
+  
+    #sideNav .navbar-collapse .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    #sideNav .navbar-collapse .navbar-nav .nav-item {
+      display: block;
+      text-align: center; /* Center text on desktop */
+    }
+  
+    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+      display: block;
+    }
+  
+    .nav-link::after {
+      width: 50%; /* Initially set the width to 50% */
+    }
+  
+    .nav-link:hover::after {
+      width: 100%; /* Expand the line on hover */
+    }
   }
+  
+  
 
 /*==================================================
                   BUTTON (Generic)
