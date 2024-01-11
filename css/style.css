@@ -983,3 +983,29 @@ a:active {
     font-weight: bold; 
     font-size: 1.2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.699);
+}
+
+
+@media (max-width: 767px) {
+    /* Center text in the welcomep */
+    .welcomep {
+        max-width: 100%; /* Adjusted for smaller screens */
+        margin: 0 auto; /* Center the text */
+    }
+}
+
+/* Add responsive styles for h1 and subheading*/
+@media (max-width: 767px) {
+    h1 {
+        font-size: 3rem; /* Adjust the font size for smaller screens */
+        line-height: 2.5rem; /* Adjust line height if needed */
+    }
+
+.subheading {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 1.5rem;
+}
+}
