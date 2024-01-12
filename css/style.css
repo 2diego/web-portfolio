@@ -596,54 +596,84 @@ a:active {
 }  
 
 
-
 /*====================================================
-                      SKILLS
+                  SKILLS
 ======================================================*/
 
 #skills {
-    background-image: url("../img/bg-stats.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.skill-cover {
-    background-color: rgba(31, 31, 31, 0.68); 
-}
-
-.skill-cover h3{
-  font-family: "hind", sans-serif;
-  font-size: 35px;
-  margin-bottom: 40px;
-}
-
-.skill-item {
-    padding: 20px 0;
-    margin-bottom: 30px;
-    background: rgba(144, 144, 144, 0.78);
-}
-
-.skill-item i {
-    color: #2196f3;
-}
-
-.skill-item h2 {
-    color: #fff;
-    font-size: "hind", sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 1px;
-}
-
-.skill-item p {
-    color: #fff;
+    background-color: #ffffff; /* Change to your desired grey/white color */
+  }
+  
+  .skill-cover {
+    padding: 50px 20px; /* Adjust padding for better spacing */
+  }
+  
+  .skill-cover h3 {
     font-family: "hind", sans-serif;
-    /*text-transform: uppercase;*/
-    font-weight: 300;
-    margin-top: 0;
-}
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  
+  .skill-badge {
+    position: relative;
+    background: linear-gradient(135deg, #262d31, rgba(33, 149, 243, 0.699));
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .skill-badge:hover {
+    background: linear-gradient(135deg, #2980b9, #4e9ab6);
+  }
+  
+  .badge-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .badge-header i {
+    margin-right: 10px;
+  }
+  
+  .badge-header h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .badge-list {
+    text-align: center;
+  }
+  
+  .badge-list span {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .badge-list span:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .skill-badge {
+      height: auto;
+    }
+  }
+  
 
 /*====================================================
                       AWARD
