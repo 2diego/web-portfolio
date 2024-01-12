@@ -599,22 +599,21 @@ a:active {
 /*====================================================
                   SKILLS
 ======================================================*/
-
 #skills {
-    background-color: #ffffff; /* Change to your desired grey/white color */
-  }
-  
-  .skill-cover {
-    padding: 50px 20px; /* Adjust padding for better spacing */
-  }
-  
-  .skill-cover h3 {
+    background-color: #ffffff;
+}
+
+.skill-cover {
+    padding: 50px 20px;
+}
+
+.skill-cover h3 {
     font-family: "hind", sans-serif;
     font-size: 35px;
     margin-bottom: 40px;
-  }
-  
-  .skill-badge {
+}
+
+.skill-badge {
     position: relative;
     background: linear-gradient(135deg, #262d31, rgba(33, 149, 243, 0.699));
     color: #fff;
@@ -628,31 +627,32 @@ a:active {
     justify-content: space-between;
     cursor: pointer;
     transition: background 0.3s;
-  }
-  
-  .skill-badge:hover {
+}
+
+.skill-badge:hover {
     background: linear-gradient(135deg, #2980b9, #4e9ab6);
-  }
-  
-  .badge-header {
+}
+
+.badge-header {
     display: flex;
     align-items: center;
-  }
-  
-  .badge-header i {
+}
+
+.badge-header i {
     margin-right: 10px;
-  }
-  
-  .badge-header h2 {
+}
+
+.badge-header h2 {
     font-size: 25px;
     margin: 0;
-  }
-  
-  .badge-list {
+}
+
+.badge-list {
     text-align: center;
-  }
-  
-  .badge-list span {
+}
+
+.badge-list span {
+    position: relative;
     display: inline-block;
     padding: 8px 16px;
     font-size: 18px;
@@ -661,18 +661,42 @@ a:active {
     margin: 8px;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  
-  .badge-list span:hover {
+}
+
+.badge-list span:hover {
     background-color: rgba(255, 255, 255, 0.4);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 767px) {
-    .skill-badge {
-      height: auto;
+}
+
+.dots-animation::after {
+    content: '...';
+    animation: dotsAnimation 2s infinite;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes dotsAnimation {
+    5% {
+        content: '';
     }
-  }
+    25% {
+        content: '.';
+    }
+    50% {
+        content: '..';
+    }
+    75% {
+        content: '...';
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .skill-badge {
+        height: auto;
+    }
+}
   
 
 /*====================================================
