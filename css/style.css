@@ -18,11 +18,14 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
     font-family: 'Saira Extra Condensed', serif;
     font-weight: 700;
     text-transform: uppercase;
+    color: #343a40;
+}
+
+h5 {
     color: #343a40;
 }
 
@@ -85,7 +88,7 @@ a:active {
     text-transform: uppercase;
     font-size: 1.4em;
     position: relative;
-    text-align: center; /* Center text on mobile */
+    text-align: center;
   }
   
   .nav-link::after {
@@ -96,9 +99,13 @@ a:active {
     bottom: 0;
     height: 4px;
     background-color: #000;
-    width: 0; /* Initially set the width to 0 */
-    transition: width 0.3s ease; /* Add transition for smoother effect */
+    width: 27%; 
+    transition: width 0.4s ease;
   }
+
+  .nav-link:hover::after {
+      width: 75%;
+    }
   
   @media (min-width: 992px) {
     #sideNav {
@@ -139,7 +146,7 @@ a:active {
   
     #sideNav .navbar-collapse .navbar-nav .nav-item {
       display: block;
-      text-align: center; /* Center text on desktop */
+      text-align: center;
     }
   
     #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -147,11 +154,13 @@ a:active {
     }
   
     .nav-link::after {
-      width: 50%; /* Initially set the width to 50% */
+      transform: translateX(-50%);
+      width: 40%;
+      transition: width 0.4s ease;
     }
   
     .nav-link:hover::after {
-      width: 100%; /* Expand the line on hover */
+      width: 75%;
     }
   }
   
@@ -250,10 +259,6 @@ a:active {
       background-size:cover;
       background-position: center center;
       background-repeat: no-repeat;
-  }
-
-  #about h1 {
-    /*font-size: 100%;*/
   }
 
 /*==================================================
@@ -397,26 +402,26 @@ a:active {
 .portfolio-modal .close-modal .lr {
     /* Safari and Chrome */
     z-index: 1051;
-    width: 1px;
+    width: 0.5em;
     height: 75px;
     margin-left: 35px;
     /* IE 9 */
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #2C3E50;
+    background-color: #ffffff;
 }
 
 .portfolio-modal .close-modal .lr .rl {
     /* Safari and Chrome */
     z-index: 1052;
-    width: 1px;
+    width: 0.5em;
     height: 75px;
     /* IE 9 */
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-color: #2C3E50;
+    background-color: #ffffff;
 }
 
 .portfolio-modal .modal-backdrop {
@@ -627,6 +632,24 @@ a:active {
     justify-content: space-between;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+@media (min-width: 767px) {
+.inv-skill-badge {
+    position: relative;
+    background: linear-gradient(-135deg, #262d31, rgba(33, 149, 243, 0.699));
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 }
 
 .skill-badge:hover {
@@ -925,20 +948,20 @@ a:active {
     padding: 50px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the entire section */
+    align-items: center; 
 }
 
 #custom-contact .custom-row {
     width: 100%;
-    max-width: 1200px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the content */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 #custom-contact .custom-contact-cont2 {
     display: -webkit-inline-box;
-    justify-content: space-around; /* Arrange items horizontally with space around */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
 #custom-contact .custom-contact-cont h3 {
@@ -953,8 +976,8 @@ a:active {
 }
 
 #custom-contact .custom-contact-cont2 .custom-contact-box {
-    flex: 0 0 33.33%; /* Each item takes up 33.33% of the container width */
-    padding: 0 3em; /* Add spacing between items */
+    flex: 0 0 33.33%; 
+    padding: 0 3em; 
 }
 
 #custom-contact .custom-contact-cont2 .custom-address-details-f a {
@@ -1026,10 +1049,11 @@ a:active {
     #custom-contact {
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
-        min-height: auto !important; /* Adjust the height */
+        min-height: auto !important; 
     }
 }
 
+/* Welcome message */
 
 .welcomep {
     max-width: 50%;
@@ -1043,16 +1067,16 @@ a:active {
 @media (max-width: 767px) {
     /* Center text in the welcomep */
     .welcomep {
-        max-width: 100%; /* Adjusted for smaller screens */
-        margin: 0 auto; /* Center the text */
+        max-width: 100%; 
+        margin: 0 auto; 
     }
 }
 
-/* Add responsive styles for h1 and subheading*/
+/* Responsive styles for h1 and subheading*/
 @media (max-width: 767px) {
     h1 {
-        font-size: 3rem; /* Adjust the font size for smaller screens */
-        line-height: 2.5rem; /* Adjust line height if needed */
+        font-size: 3rem; 
+        line-height: 2.5rem; 
     }
 
 .subheading {
@@ -1062,4 +1086,80 @@ a:active {
     font-family: 'Saira Extra Condensed', serif;
     font-size: 1.5rem;
 }
+}
+
+/* Modals */
+
+.modal-content {
+    background-color: #262d31;
+    color: #fff;
+    border: 1px solid #4e9ab6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 20px;  
+    align-self: center;
+
+}
+
+.modal-title {
+    font-size: 25px;
+    background-color: white;
+}
+
+.modal-body {
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* Improved modal centering */
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 30%;
+        margin: 1.75rem auto;
+    }
+}
+
+/* Fade animation for modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .skill-badge {
+        height: auto;
+    }
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.portfolio-modal .close-modal div {
+    background-color: #fff; /* Set the color to white */
+}
+
+.portfolio-modal .close-modal div::before,
+.portfolio-modal .close-modal div::after {
+    background-color: #fff; /* Set the color to white */
+}
+
+
+.modal {
+    padding: 10px;
+    text-align: -webkit-center;
+}
+
+.modal-dialog {
+    width: fit-content;
 }

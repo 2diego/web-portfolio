@@ -38,3 +38,12 @@ if ($('.typed-text-output').length == 1) {
 }
 
 })(jQuery); // End of use strict
+
+
+// This script closes the modal when click outside of it
+$(document).mouseup(function (e) {
+  var container = $(".modal-content");
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.closest(".modal").modal("hide");
+  }
+});
