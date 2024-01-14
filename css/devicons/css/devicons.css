@@ -2,15 +2,14 @@
  *  Devicons 1.8.0 made by Theodore Vorillas / http://vorillaz.com 
  */
 @font-face {
-  font-family: 'devicons';
+  font-family: "devicons";
   src: url("../fonts/devicons.eot?xqxft6");
   src: url("../fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../fonts/devicons.woff?xqxft6") format("woff"), url("../fonts/devicons.ttf?xqxft6") format("truetype"), url("../fonts/devicons.svg?xqxft6#devicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 .devicons {
-  font-family: 'devicons';
+  font-family: "devicons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -784,4 +783,4 @@
 
 .devicons-vim:before {
   content: "\e6c5";
-}
+}/*# sourceMappingURL=devicons.css.map */
