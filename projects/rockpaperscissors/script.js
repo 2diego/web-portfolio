@@ -5,7 +5,7 @@ function footer() {
   const text2 = 'Just to be clear';
   const img2 = '<img src="./images/justToBeClear3.jpeg"">';
 
-  const text3 = 'And I didnt pay for the rights of anything in here but its for study purposes only so just be cool about it..';
+  const text3 = 'Didnt pay for the rights of anything here but its for study purposes only so just be cool about it..';
   const img3 = '<img src="./images/justToBeClear2.jpeg">';
 
   const text4 = 'Just to be clear';

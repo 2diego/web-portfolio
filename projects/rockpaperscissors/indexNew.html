@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dayman Nightman Troll</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="styleNew.css">
+</head>
+
+<body>
+  <div id="top">
+    <div style="align-self: center;">
+      <h1 class="header">Dayman <br> Nightman <br> Troll</h1><br><a href="/index.html" style="text-align: center;" class="back btn btn-outline-light">Go back to portfolio</a>
+    </div>
+    <div class="container-newgame">
+      <div>
+        <button type="button" class="new-game btn btn-outline-light" id="new-game">New Game</button>
+      </div>
+      <br>
+      <div>
+        <h2 id="round">ROUND: 0</h2>
+      </div>
+      <div class="score">
+        <div id="player-score">
+          <h3>Your score<br>0</h3>
+        </div>
+        <div id="cpu-score">
+          <h3>CPU score<br>0</h3>
+        </div>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div id="slide-img"></div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+    <h1 id="rules" style="width: 100%;"></h1>
+    <div id="slide-text"></div>
+  </div>
+
+  <div>
+    <h3 class="choose">Choose:</h3>
+    <div class="container">
+      <img src="./images/dayman-win.jpeg" alt="Dayman" class="img-choose" id="daymanSelect">
+
+      <img src="./images/nightman-win.jpeg" alt="Nightman" class="img-choose" id="nightmanSelect">
+
+      <img src="./images/troll-win.jpeg" alt="Troll" style="object-position: 0 0;" class="img-choose"
+        id="trollSelect">
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div id="player-choice"></div>
+
+    <h1 class="vs">VS</h1>
+
+    <div id="cpu-choice"></div>
+  </div>
+  <br>
+  <h1 id="result">&nbsp;</h1>
+
+</body>
+
+<script src="./javascript.js"></script>
+<script src="./script.js"></script>
+
+</html>

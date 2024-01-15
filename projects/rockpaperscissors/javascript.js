@@ -53,81 +53,81 @@ function game(dnt) {
 
 function playRoundDayman() {
   if (computerSelection == "dayman") {
-      winner = "Dayman tie!.. REMATCH!";
-      document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-tie.jpeg">';
-      document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-tie.jpeg">';
+      winner = "DAYMAN TIE!<br>Please just rematch me!";
+      document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-tie.jpeg"  class="img-choose">';
+      document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-tie.jpeg"  class="img-choose">';
       document.getElementById('result').innerHTML = winner; 
 } else if (computerSelection == "nightman") {
-      winner = "Dayman is not a boy anymore!";
+      winner = "DAYMAN WINS!<br>Dayman is not a boy anymore!";
       playerScore++;
       round++;
       document.getElementById('round').innerHTML = "ROUND: " + round;
       document.getElementById('player-score').innerHTML = "<h3>Your score<br>" + playerScore + "</h3>";
-      document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-lose.jpeg" style="width: 240px; height: auto;">';
-      document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-win.jpeg" style="width: 240px; height: auto;">';
+      document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-lose.jpeg"  class="img-choose">';
+      document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-win.jpeg"  class="img-choose">';
       document.getElementById('result').innerHTML = winner; 
 } else if (computerSelection == "troll") {
-    winner = "Dayman is not a man yet";
+    winner = "DAYMAN LOSES!<br>Dayman is not a man yet";
     computerScore++;
     round++;
     document.getElementById('round').innerHTML = "ROUND: " + round;
     document.getElementById('cpu-score').innerHTML = "<h3>CPU score<br>" + computerScore + "</h3>";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-win.jpeg">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-lose.jpeg" style="width: 240px; height: auto;">';
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-win.jpeg"  class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/dayman-lose.jpeg"  class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 };
 };
 
 function playRoundNightman() {
   if (computerSelection == "dayman") {
-    winner = "Nightman gets humiliated";
+    winner = "NIGHTMAN LOSES!<br>Nightman gets humiliated";
     computerScore++;
     round++;
     document.getElementById('round').innerHTML = "ROUND: " + round;
     document.getElementById('cpu-score').innerHTML = "<h3>CPU score<br>" + computerScore + "</h3>";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-win.jpeg" style="width: 240px; height: auto;">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-lose.jpeg" style="width: 240px; height: auto;">';
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-win.jpeg"  class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-lose.jpeg"  class="img-choose">';
     document.getElementById('result').innerHTML = winner;
 } else if (computerSelection == "nightman") {
-    winner = "Nightman tie! They are going for gasps!";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-tie.jpeg">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-tie.jpeg">';
+    winner = "NIGHTMAN TIE!<br>They are going for gasps!";
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-tie.jpeg" class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-tie.jpeg" class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 } else if (computerSelection == "troll") {
-    winner = "Confound your lousy toll, Troll!";
+    winner = "NIGHTMAN WINS!<br>Confound your lousy toll, Troll!";
     playerScore++;
     round++;
     document.getElementById('round').innerHTML = "ROUND: " + round;
     document.getElementById('player-score').innerHTML = "<h3>Your score<br>" + playerScore + "</h3>";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-lose.jpeg">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-win.jpeg" style="width: 240px; height: auto;">';
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-lose.jpeg" class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/nightman-win.jpeg" class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 };
 };
 
 function playRoundTroll() {
   if (computerSelection == "troll") {
-    winner = "Troll tie! hey hey hey.. Troll tie!";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-tie.jpeg">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-tie.jpeg">';
+    winner = "TROLL TIE!<br>...hey hey hey.. Troll tie!";
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/troll-tie.jpeg" class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-tie.jpeg" class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 } else if (computerSelection == "dayman") {
-    winner = "The troll owns that boy's.. did he said soul?";
+    winner = "TROLL WINS!<br>The troll owns that boy's.. did he said soul?";
     playerScore++;
     round++;
     document.getElementById('round').innerHTML = "ROUND: " + round;
     document.getElementById('player-score').innerHTML = "<h3>Your score<br>" + playerScore + "</h3>";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-lose.jpeg" style="width: 240px; height: auto;">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-win.jpeg">';
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/dayman-lose.jpeg" class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-win.jpeg" class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 } else if (computerSelection == "nightman") {
-    winner = "The troll gets the toll but the nightman gets the.. I think he said soul";
+    winner = "TROLL LOSES!<br>The troll gets the toll but the nightman gets the.. I think he said soul";
     computerScore++;
     round++;
     document.getElementById('round').innerHTML = "ROUND: " + round;
     document.getElementById('cpu-score').innerHTML = "<h3>CPU score<br>" + computerScore + "</h3>";
-    document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-win.jpeg" style="width: 240px; height: auto;">';
-    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-lose.jpeg">';
+    document.getElementById('cpu-choice').innerHTML = '<img src="./images/nightman-win.jpeg" class="img-choose">';
+    document.getElementById('player-choice').innerHTML = '<img src="./images/troll-lose.jpeg" class="img-choose">';
     document.getElementById('result').innerHTML = winner; 
 };
 };
