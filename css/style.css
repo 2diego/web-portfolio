@@ -604,9 +604,6 @@ a:active {
 /*====================================================
                   SKILLS
 ======================================================*/
-#skills {
-    background-color: #ffffff;
-}
 
 .skill-cover {
     padding: 50px 20px;
@@ -620,7 +617,6 @@ a:active {
 
 .skill-badge {
     position: relative;
-    background: linear-gradient(135deg, #262d31, rgba(33, 149, 243, 0.699));
     color: #fff;
     padding: 20px;
     margin-bottom: 30px;
@@ -629,7 +625,7 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -637,7 +633,6 @@ a:active {
 @media (min-width: 767px) {
 .inv-skill-badge {
     position: relative;
-    background: linear-gradient(-135deg, #262d31, rgba(33, 149, 243, 0.699));
     color: #fff;
     padding: 20px;
     margin-bottom: 30px;
@@ -646,7 +641,7 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -1172,4 +1167,15 @@ a:active {
 
 .modal-dialog {
     width: fit-content;
+}
+
+.skill-background {
+    background: linear-gradient(135deg, #262d31, rgba(33, 149, 243, 0.699));
+}
+
+
+@media (min-width: 767px) {
+    .inv-skill-background {
+    background: linear-gradient(-135deg, #262d31, rgba(33, 149, 243, 0.699));
+    }
 }
