@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background-color: #4caf50;
+    background-color: #337ab7;
     color: white;
     padding: 20px;
     font-size: 2em;
@@ -103,7 +103,7 @@ body {
   #observaciones {
     width: 100%;
     padding: 10px;
-    margin-top: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
