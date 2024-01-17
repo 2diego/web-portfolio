@@ -126,3 +126,9 @@ label {
   width: 100%;
   display: inline-block;
 }
+
+.green-box {
+  background-color: #4CAF54;
+  border-radius: 5%;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2) !important;
+}
