@@ -131,6 +131,11 @@ body {
 
 @media (max-width: 767px) {
 
+  .new-game {
+    margin-top: 10px;
+    margin-left: 85%;
+  }
+
   body {
     text-align-last: center;
   }
@@ -187,7 +192,8 @@ body {
   }
 
   #slide-img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
   }
 }
