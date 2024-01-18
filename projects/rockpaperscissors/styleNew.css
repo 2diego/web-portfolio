@@ -1,16 +1,19 @@
 body {
-  padding: 20px;
   background: linear-gradient(180deg, rgb(14, 41, 56) 0%, rgb(0, 0, 0) 90%);
   color: white;
-  margin: 0;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #top {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 20px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container-newgame {
+  text-align-last: center;
 }
 
 .header {
@@ -19,13 +22,6 @@ body {
 
 .score {
   display: flex;
-  contain: inline-size;
-}
-
-.container-newgame {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 .new-game,
@@ -47,7 +43,7 @@ body {
   text-align-last: center;
   border: 2px solid white;
   background: linear-gradient(45deg, rgb(104, 126, 133) 0%, rgb(214, 214, 210) 100%);
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .choose {
@@ -77,6 +73,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
 }
 
 #player-choice,
@@ -94,9 +91,6 @@ body {
 }
 
 #result {
-  grid-column: 1 / 4;
-  display: flex;
-  justify-content: center;
   font-size: xx-large;
   text-align: center;
 }
@@ -133,7 +127,6 @@ body {
 
   .new-game {
     margin-top: 10px;
-    margin-left: 85%;
   }
 
   body {
@@ -147,6 +140,7 @@ body {
 
   .container-topRight {
     display: flex;
+    flex-direction: column;
   }
 
   .flex-container {
@@ -195,5 +189,11 @@ body {
     height: 100px;
     width: 100px;
     margin-left: auto;
+    justify-content: flex-end;
+  }
+  
+  #rules {
+    margin-top: -100px;
+    text-align-last: start;
   }
 }
