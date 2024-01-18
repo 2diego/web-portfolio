@@ -23,6 +23,7 @@ header {
     align-items: flex-start;
     font-family: math;
     font-weight: bolder;
+    flex-wrap: wrap;
 }
 
 .sales-form {
@@ -40,14 +41,6 @@ header {
     text-align: -webkit-center;
 }
 
-.products-container {
-  margin-bottom: 20px;
-  min-width: 500px;
-}
-
-.order-container {
-  min-width: 375px;
-}
 
 .container-select {
     border-width: medium;
@@ -132,6 +125,7 @@ label {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: inline-block;
+  text-align: center;
 }
 
 .green-box {
@@ -139,3 +133,10 @@ label {
   border-radius: 5%;
   box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2) !important;
 }
+
+@media (min-width: 769px) {
+
+  .order-container {
+   min-width: 500px;
+  }
+ }

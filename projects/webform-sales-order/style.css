@@ -1,13 +1,15 @@
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
-    margin-top: 100px;
 }
 
 .icons-container {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -22,7 +24,6 @@
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
     width: fit-content;
     align-self: center;
-    min-height: 50px;
     display: flex;
     align-items: center;
     margin-top: 60px;
@@ -30,7 +31,6 @@
 }
 
 img {
-    min-height: 400px;
     box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 1); 
     border-radius: 25%; 
     transition: transform 0.3s ease-in-out; 
@@ -42,4 +42,9 @@ img:hover {
 
 .button:hover {
     transform: scale(1.05); 
+}
+
+a {
+    margin: 10px;
+    color: inherit !important;
 }
