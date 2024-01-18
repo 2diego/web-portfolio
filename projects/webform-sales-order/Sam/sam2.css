@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-image: url("https://media-exp1.licdn.com/dms/image/C4E0BAQFVFEtxIsgiew/company-logo_200_200/0/1584458762266?e=2147483647&v=beta&t=HX9p9dJl-I6A1E4CVBQ6bqqeTEavZRQe94teWtEgelk");
     background-blend-mode: lighten;
+    -webkit-text-stroke-width: thin;
   }
   
   header {
@@ -42,6 +43,10 @@ body {
   .products-container {
     margin-bottom: 20px;
     min-width: 500px;
+  }
+
+  .order-container {
+    min-width: 375px;
   }
   
   .container-select {
@@ -134,3 +139,12 @@ body {
     border-radius: 5%;
     box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2) !important;
   }
+
+  .product-description {
+    font-size: x-small;
+  }
+
+/*  .order-container {
+    max-width: 250px;
+    margin: 0;
+  } */

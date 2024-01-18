@@ -341,45 +341,45 @@ window.addEventListener('change', () => {
 
 
 window.addEventListener('change', () => {
-  if (Number(p30.value) > 0) {
-    document.getElementById("carroP30").innerHTML = "PREM. MEGAPACK P30: " + Number(p30.value) + " BULTOS";
-  } else if (Number(p30.value) == 0) {
+  if (Number(pP30.value) > 0) {
+    document.getElementById("carroPP30").innerHTML = "PREM. MEGAPACK P30: " + Number(pP30.value) + " BULTOS";
+  } else if (Number(pP30.value) == 0) {
     document.getElementById("carroP30").innerHTML = "";
   }
 });
 
 
 window.addEventListener('change', () => {
-  if (Number(m52.value) > 0) {
-    document.getElementById("carroM52").innerHTML = "PREM. HIPERPACK M52: " + Number(m52.value) + " BULTOS";
-  } else if (Number(m52.value) == 0) {
+  if (Number(pM52.value) > 0) {
+    document.getElementById("carroPM52").innerHTML = "PREM. HIPERPACK M52: " + Number(pM52.value) + " BULTOS";
+  } else if (Number(pM52.value) == 0) {
     document.getElementById("carroM52").innerHTML = "";
   }
 });
 
 
 window.addEventListener('change', () => {
-  if  (Number(g44.value) > 0) {
-    document.getElementById("carroG44").innerHTML = "PREM. HIPERPACK G44: " + Number(g44.value) + " BULTOS";
-  } else if (Number(g44.value) == 0) {
+  if  (Number(pG44.value) > 0) {
+    document.getElementById("carroPG44").innerHTML = "PREM. HIPERPACK G44: " + Number(pG44.value) + " BULTOS";
+  } else if (Number(pG44.value) == 0) {
     document.getElementById("carroG44").innerHTML = "";
   }
 });
 
 
 window.addEventListener('change', () => {
-  if (Number(xg36.value) > 0) {
-    document.getElementById("carroXG36").innerHTML = "PREM. HIPERPACK XG36: " + Number(xg36.value) + " BULTOS";
-  } else if (Number(xg36.value) == 0) {
+  if (Number(pXg36.value) > 0) {
+    document.getElementById("carroPXG36").innerHTML = "PREM. HIPERPACK XG36: " + Number(pXg36.value) + " BULTOS";
+  } else if (Number(pXg36.value) == 0) {
     document.getElementById("carroXG36").innerHTML = "";
   }
 });
 
 
 window.addEventListener('change', () => {
-  if (Number(xxg34.value) > 0) {
-    document.getElementById("carroXXG34").innerHTML = "PREM. HIPERPACK XXG34: " + Number(xxg34.value) + " BULTOS";
-  } else if (Number(xxg34.value) == 0) {
+  if (Number(pXxg34.value) > 0) {
+    document.getElementById("carroPXXG34").innerHTML = "PREM. HIPERPACK XXG34: " + Number(pXxg34.value) + " BULTOS";
+  } else if (Number(pXxg34.value) == 0) {
     document.getElementById("carroXXG34").innerHTML = "";
   }
 });
