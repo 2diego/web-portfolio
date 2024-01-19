@@ -2,6 +2,7 @@ body {
   background: linear-gradient(180deg, rgb(14, 41, 56) 0%, rgb(0, 0, 0) 90%);
   color: white;
   height: 100vh;
+  margin: 20px;
 }
 
 #top {
@@ -47,12 +48,12 @@ body {
 }
 
 .choose {
-  grid-column: 1 / 4;
   display: flex;
   justify-content: center;
   border: 2px solid white;
   background: grey;
-  font-size: medium;
+  font-size: x-large;
+  margin-bottom: 20px;
 }
 
 .img-choose {
