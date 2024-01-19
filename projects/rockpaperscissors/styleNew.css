@@ -105,9 +105,10 @@ body {
 #slide-text {
   display: flex;
   justify-content: flex-end;
-  font-size: medium;
   width: 100%;
   z-index: 1;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 #slide-img {
