@@ -17,8 +17,8 @@
     cursor: pointer;
     text-decoration: none;
     margin-right: 10px;
-    background-color: #337AA3;
-    color: white;
+    background-color: #4d8db3;
+    color: white !important;
     border: none;
     border-radius: 4px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
@@ -28,6 +28,9 @@
     align-items: center;
     margin-top: 60px;
     transition: transform 0.3s ease-in-out; 
+    font-family: math;
+    font-weight: bolder;
+    
 }
 
 img {
