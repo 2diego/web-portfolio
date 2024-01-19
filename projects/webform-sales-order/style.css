@@ -2,17 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
 }
 
-.icons-container {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.button {
+/*.button {
     font-size: 1.2em;
     cursor: pointer;
     text-decoration: none;
@@ -31,12 +23,13 @@
     font-family: math;
     font-weight: bolder;
     
-}
+} */
 
 img {
     box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 1); 
     border-radius: 25%; 
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
+    margin: 80px;
 }
 
 img:hover {
@@ -45,9 +38,4 @@ img:hover {
 
 .button:hover {
     transform: scale(1.05); 
-}
-
-a {
-    margin: 10px;
-    color: inherit !important;
 }
