@@ -1,9 +1,8 @@
-#PlanillaDePedidosSamZan
-SamZan's sales order form
+# Sales Order Form
 
-<<<<<<< HEAD
-Project --
-=======
-Project -
->>>>>>> cf463de25b6432e4d7bcc41d08ed37edfee6b00d
-Sales order form for two companies, customized with their products and clients, that once is completed its send to the company's email
+sam.html/zan.html:
+        -Web form for processing sales for a company that commercializes two brands. A project created for practicing JavaScript.
+
+signIn.html/index.html/sam2.html/zan2.html:
+        -Project extended to practice front-end development using Bootstrap.
+

@@ -1,3 +1,5 @@
-PORTFOLIO WEB -
+# PORTFOLIO WEB -
 
-UNDER CONSTRUCTION
+Webpage to show my projects -under construction-
+
+WITH CHANGES BUT BASED ON: https://themewagon.com/themes/bootstrap-4-portfolio-website-template-profile/
