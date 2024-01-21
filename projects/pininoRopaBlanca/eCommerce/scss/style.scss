@@ -288,7 +288,7 @@ a {
 			bottom: 15px;
 			left: 50%;
 			transform: translateX(-50%);
-			margin-bottom: -17.5px;
+			// margin-bottom: -17.5px;
 			border-radius: 50%;
 			opacity: 0;
 			visibility: hidden;
@@ -328,4 +328,6 @@ a {
 	}
 }
 
-
+.slick-initialized .slick-slide {
+    margin-left: 10px;
+}

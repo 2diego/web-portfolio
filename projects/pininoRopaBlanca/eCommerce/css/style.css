@@ -275,7 +275,6 @@ a.more {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: -17.5px;
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
@@ -309,4 +308,8 @@ a.more {
 }
 .product-section .product-item:hover:before {
   height: 70%;
+}
+
+.slick-initialized .slick-slide {
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */
