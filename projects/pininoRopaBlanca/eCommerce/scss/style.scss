@@ -396,14 +396,21 @@ a {
 		}
 	}
 }
-@media (max-width: $lg - 1) {
-	.instagram-media,
-	.facebook-media {
-	  max-width: 60% !important;
-	  margin: 0 auto !important;
-  
-	  .socials-item {
-		width: 60% !important;
-	  }
+@media (max-width: $md) {
+	#instagramCarousel,
+	#facebookCarousel {
+	  max-width: 15rem !important;
 	}
   }
+
+@media (min-width: $md) {
+	#instagramCarousel,
+	#facebookCarousel {
+		max-width: 35rem !important;
+	}
+}
+
+
+.slick-list {
+	width: auto !important;
+}

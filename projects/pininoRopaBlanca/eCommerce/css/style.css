@@ -369,16 +369,20 @@ a.more {
   transition: 0.3s all ease;
 }
 
-@media (max-width: 991px) {
-  .instagram-media,
-  .facebook-media {
-    max-width: 60% !important;
-    margin: 0 auto !important;
+@media (max-width: 768px) {
+  #instagramCarousel,
+  #facebookCarousel {
+    max-width: 15rem !important;
   }
-  .instagram-media .socials-item,
-  .facebook-media .socials-item {
-    width: 60% !important;
+}
+@media (min-width: 768px) {
+  #instagramCarousel,
+  #facebookCarousel {
+    max-width: 35rem !important;
   }
+}
+.slick-list {
+  width: auto !important;
 }
 
 /*# sourceMappingURL=style.css.map */
