@@ -74,7 +74,7 @@ window.addEventListener('load', () => { // load precios y divs del carro //
 
       const divsCarro = document.createElement("div");
       divsCarro.setAttribute("id", ("carro" + key))
-      document.getElementById("container-carro").appendChild(divsCarro);
+      document.getElementById("divs-carro").appendChild(divsCarro);
     };
   };
 });

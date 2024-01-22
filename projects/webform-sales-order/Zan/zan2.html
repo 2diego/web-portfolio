@@ -17,27 +17,18 @@
 
       <div class="flex-container">
         <div class="order-container">
-          <div class="sales-form">
-            <div>
-              <div class="green-box">
-                <div id="date" style="text-align:end; border-radius: 5% 5% 0 0;">Dia/Mes/Ano</div>
-                <div style="text-align:end; border-radius: 0 0 5% 5%;">N° de orden de compra</div>
-              </div>
-              <br>
-              <select class="container-select" name="localidad" id="localidad">
-                <option value="olavarria" selected>Olavarria</option>
-                <option value="tandil">Tandil</option>
-                <option value="trenquelauquen">Trenque Lauquen</option>
-              </select>
+          <div class="sales-form"  id="container-carro" style="background-color: lightyellow; text-align-last: center;">
+            <p>NOTA DE PEDIDO</p>
+            <div class="d-flex justify-between">
+              <p id="date" class="mr-2">Dia/Mes/Ano</p>
+              <p class="ml-2">Nº Pedido</p>
+            </div>
+            <div class="d-flex justify-between">
+              <p class="mr-2">Client Account</p>
+              <p class="ml-2">Ciudad</p>
             </div>
             <br>
-            <div>
-              <select class="container-select" name="clientes" id="clientes"> <!-- script clientes por localidad -->
-                <option value="clienteLocalidad" selected>ClientexLocalidad</option>
-              </select>
-            </div>
-            <br>
-            <div id="container-carro" class="sales-form" style="background-color: lightyellow; text-align-last: center;"> NOTA DE PEDIDO
+            <div class="sales-form green-box"> DETALLE:
                 <br>
                 <br>
                 <div id="carroP24"></div>
@@ -56,9 +47,7 @@
                 <div id="carroPXG36"></div>
                 <div id="carroPXXG34"></div>
             </div>
-          </div>
-          <br>
-          <div class="sales-form">
+            <br>
             <fieldset  class="green-box" style="border-radius: 5%;">
               <table style="margin: auto;">
                 <tr>
