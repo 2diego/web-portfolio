@@ -245,6 +245,7 @@ a.more {
 
 .product-section {
   padding: 4rem 0 2rem;
+  background-color: #dce5e4;
 }
 .product-section .product-item {
   text-align: center;
@@ -332,7 +333,7 @@ a.more {
 
 .socials-section {
   padding: 2rem 0 2rem 0;
-  background-color: #dce5e4;
+  background-color: #eff2f1;
 }
 .socials-section .socials-item {
   text-align: center;
@@ -368,9 +369,16 @@ a.more {
   transition: 0.3s all ease;
 }
 
-#instagramCarousel .socials-item,
-#facebookCarousel .socials-item {
-  text-align: -webkit-center;
+@media (max-width: 991px) {
+  .instagram-media,
+  .facebook-media {
+    max-width: 60% !important;
+    margin: 0 auto !important;
+  }
+  .instagram-media .socials-item,
+  .facebook-media .socials-item {
+    width: 60% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
