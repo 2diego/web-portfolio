@@ -260,7 +260,7 @@ a {
 	color: $dark;
 }
 .product-section {
-	padding: 7rem 0;
+	padding: 4rem 0 2rem;
 
 	.product-item {
 		text-align: center;
@@ -357,7 +357,8 @@ a {
 	color: $dark;
 }
 .socials-section {
-	padding: 7rem 0;
+	padding: 2rem 0 2rem 0;
+	background-color: $light;
 
 	.socials-item {
 		text-align: center;
@@ -368,12 +369,6 @@ a {
 		cursor: pointer;
 		width: auto;
 
-		.socials-thumbnail {
-			margin-bottom: 30px;
-			position: relative;
-			top: 0;
-			transition: .3s all ease;
-		}
 		h3 {
 			font-weight: 600;
 			font-size: 16px;
@@ -397,14 +392,6 @@ a {
 			z-index: -1;
 			border-radius: 10px;
 			transition: .3s all ease;
-		}
-		&:hover {
-			.socials-thumbnail {
-				top: -25px;
-			}
-			&:before {
-				height: 70%;
-			}
 		}
 	}
 }
