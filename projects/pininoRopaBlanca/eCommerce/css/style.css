@@ -1,3 +1,9 @@
+/*
+* Template Name: UntreeStore
+* Template Author: Untree.co
+* Author URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 body {
   overflow-x: hidden;
@@ -138,7 +144,7 @@ a.more {
 }
 .hero p {
   color: rgba(255, 255, 255, 0.5);
-  margin-botom: 30px;
+  margin-bottom: 30px;
 }
 .hero .hero-img-wrap {
   position: relative;
@@ -312,4 +318,70 @@ a.more {
 
 .slick-initialized .slick-slide {
   margin-left: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000000 !important;
+  opacity: 0.5;
+}
+
+.section-title {
+  color: #2f2f2f;
+}
+
+.socials-section {
+  padding: 7rem 0;
+}
+.socials-section .socials-item {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+  cursor: pointer;
+  width: auto;
+}
+.socials-section .socials-item .socials-thumbnail {
+  margin-bottom: 30px;
+  position: relative;
+  top: 0;
+  transition: 0.3s all ease;
+}
+.socials-section .socials-item h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.socials-section .socials-item strong {
+  font-weight: 800 !important;
+  font-size: 18px !important;
+}
+.socials-section .socials-item h3, .socials-section .socials-item strong {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+.socials-section .socials-item:before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  background: #dce5e4;
+  height: 0%;
+  z-index: -1;
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+.socials-section .socials-item:hover .socials-thumbnail {
+  top: -25px;
+}
+.socials-section .socials-item:hover:before {
+  height: 70%;
+}
+
+#instagramCarousel .socials-item,
+#facebookCarousel .socials-item {
+  text-align: -webkit-center;
+}
+
+/*# sourceMappingURL=style.css.map */
