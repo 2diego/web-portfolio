@@ -350,6 +350,7 @@ a {
 // Socials Section
 .section-title {
 	color: $dark;
+	padding: 0 0 2rem 0 !important;
 }
 .socials-section {
 	padding: 2rem 0 2rem 0;
@@ -357,80 +358,54 @@ a {
 	max-width: 100%;
 
 	.socials-item {
-		text-align: center;
-		text-decoration: none;
-		display: block;
 		position: relative;
 		padding-bottom: 50px;
 		cursor: pointer;
-		width: auto;
-
-		h3 {
-			font-weight: 600;
-			font-size: 16px;
-		}
-		strong {
-			font-weight: 800!important;
-			font-size: 18px!important;
-		}
-		h3, strong {
-			color: $dark;
-			text-decoration: none;
-		}
-		&:before {
-			bottom: 0;
-			left: 0;
-			right: 0;
-			position: absolute;
-			content: "";
-			background: $light;
-			height: 0%;
-			z-index: -1;
-			border-radius: 10px;
-			transition: .3s all ease;
-		}
 	}
 }
 
-//Carousel
-
-.slick-initialized .slick-slide {
-    margin-left: 10px;
+// Carousel
+// PRODUCTS 
+.product-item {
+    margin: 5px !important;
 }
 
-.slick-prev:before,
-.slick-next:before {
-	color: $black !important;
-	opacity: 0.5;
+.product-item a {
+	text-align: -webkit-center;
+}
+//
+//SOCIALS
+@media (max-width: $xxl) {
+#instagramCarousel,
+#facebookCarousel {
+	max-width: 15rem !important;
 }
 
-@media (max-width: $md) {
-	#instagramCarousel,
-	#facebookCarousel {
-	  max-width: 15rem !important;
-	}
+.instagram-media {
+	min-inline-size: -webkit-fill-available !important;
+}
 
-	.instagram-media {
-		min-inline-size: -webkit-fill-available !important;
-	}
+.instagram-media-registered {
+	display: contents;
+}
 
-	.instagram-media-registered {
-		display: contents;
-	}
+#rowToColumn {
+	flex-direction: column;
+	align-content: center;
+}
+}
 
-	.facebook-media {
-		width: -webkit-fill-available;
-	}
-  }
-
-@media (min-width: $md) {
-	#instagramCarousel,
-	#facebookCarousel {
-		max-width: 35rem !important;
-	}
+@media (min-width: $sm) {
+#instagramCarousel,
+#facebookCarousel {
+	max-width: 35rem !important;
+}
 }
 
 
-.slick-list {
-	width: auto !important;
+//Footer
+
+.footer-section {
+	background-color: $primary;
+	color: $white;
 }
