@@ -318,7 +318,6 @@ a.more {
 
 .section-title {
   color: #2f2f2f;
-  padding: 0 0 2rem 0 !important;
 }
 
 .socials-section {
@@ -332,6 +331,13 @@ a.more {
   cursor: pointer;
 }
 
+.slick-prev:before,
+.slick-next::before {
+  color: #000000 !important;
+  font-size: 30px;
+  opacity: 0.5;
+}
+
 .product-item {
   margin: 5px !important;
 }
@@ -340,28 +346,10 @@ a.more {
   text-align: -webkit-center;
 }
 
-@media (max-width: 1400px) {
-  #instagramCarousel,
-  #facebookCarousel {
-    max-width: 15rem !important;
-  }
-  .instagram-media {
-    min-inline-size: -webkit-fill-available !important;
-  }
-  .instagram-media-registered {
-    display: contents;
-  }
-  #rowToColumn {
-    flex-direction: column;
-    align-content: center;
-  }
+.fb-post {
+  overflow: hidden;
 }
-@media (min-width: 576px) {
-  #instagramCarousel,
-  #facebookCarousel {
-    max-width: 35rem !important;
-  }
-}
+
 .footer-section {
   background-color: #3b5d50;
   color: #ffffff;

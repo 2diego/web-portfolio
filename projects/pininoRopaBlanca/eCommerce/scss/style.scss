@@ -345,7 +345,6 @@ a {
 // Socials Section
 .section-title {
 	color: $dark;
-	padding: 0 0 2rem 0 !important;
 }
 .socials-section {
 	padding: 2rem 0 2rem 0;
@@ -360,6 +359,12 @@ a {
 }
 
 // Carousel
+.slick-prev:before,
+.slick-next::before {
+	color: $black !important;
+	font-size: 30px;
+	opacity: 0.5;
+}
 // PRODUCTS 
 .product-item {
     margin: 5px !important;
@@ -370,32 +375,36 @@ a {
 }
 //
 //SOCIALS
-@media (max-width: $xxl) {
-#instagramCarousel,
-#facebookCarousel {
-	max-width: 15rem !important;
+.fb-post {
+	overflow: hidden;
 }
 
-.instagram-media {
-	min-inline-size: -webkit-fill-available !important;
-}
+// @media (max-width: $xxl) {
+// #instagramCarousel,
+// #facebookCarousel {
+// 	max-width: 15rem !important;
+// }
 
-.instagram-media-registered {
-	display: contents;
-}
+// .instagram-media {
+// 	min-inline-size: -webkit-fill-available !important;
+// }
 
-#rowToColumn {
-	flex-direction: column;
-	align-content: center;
-}
-}
+// .instagram-media-registered {
+// 	display: contents;
+// }
 
-@media (min-width: $sm) {
-#instagramCarousel,
-#facebookCarousel {
-	max-width: 35rem !important;
-}
-}
+// #rowToColumn {
+// 	flex-direction: column;
+// 	align-content: center;
+// }
+// }
+
+// @media (min-width: $sm) {
+// #instagramCarousel,
+// #facebookCarousel {
+// 	max-width: 35rem !important;
+// }
+// }
 
 
 //Footer
