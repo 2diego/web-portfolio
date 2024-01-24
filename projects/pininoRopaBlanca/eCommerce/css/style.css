@@ -346,6 +346,30 @@ a.more {
   text-align: -webkit-center;
 }
 
+.wrapper {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.carouselShop {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.carouselShop img {
+  max-width: 100%;
+}
+
+.carouselShop .slick-slide {
+  margin: 10px;
+}
+
+.carouselShop .slick-track {
+  display: flex;
+  align-items: center;
+}
+
 .fb-post {
   overflow: hidden;
 }

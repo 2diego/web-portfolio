@@ -373,39 +373,36 @@ a {
 .product-item a {
 	text-align: -webkit-center;
 }
-//
+
+//SHOP
+.wrapper{
+	width:100%;
+	padding-top: 20px;
+	text-align:center;
+}
+.carouselShop{
+	width:90%;
+	margin:0px auto;
+  }
+.carouselShop img {
+	max-width: 100%;
+	
+}
+
+.carouselShop .slick-slide {
+	margin: 10px;
+}
+
+.carouselShop .slick-track {
+	display: flex;
+	align-items: center;
+}
+
+
 //SOCIALS
 .fb-post {
 	overflow: hidden;
 }
-
-// @media (max-width: $xxl) {
-// #instagramCarousel,
-// #facebookCarousel {
-// 	max-width: 15rem !important;
-// }
-
-// .instagram-media {
-// 	min-inline-size: -webkit-fill-available !important;
-// }
-
-// .instagram-media-registered {
-// 	display: contents;
-// }
-
-// #rowToColumn {
-// 	flex-direction: column;
-// 	align-content: center;
-// }
-// }
-
-// @media (min-width: $sm) {
-// #instagramCarousel,
-// #facebookCarousel {
-// 	max-width: 35rem !important;
-// }
-// }
-
 
 //Footer
 
