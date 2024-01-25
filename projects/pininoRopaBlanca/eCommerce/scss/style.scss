@@ -408,6 +408,34 @@ a {
 	align-items: center;
 }
 
+.shop-title-bg {
+	transform-origin: center;
+	align-items: center;
+}
+
+.shop-btn {
+	margin-bottom: -1rem;
+	margin-top: 0.5rem;
+}
+
+@media (min-width: $sm) {
+	.shop-start {
+		padding-top: 0.75rem; 
+		height: 4rem !important;
+	}
+
+	.shop-title-bg {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.shop-btn {
+		margin-top: 0.2rem;
+		height: 2.5rem; 
+		width: 7rem;
+	}
+}
+
 
 //SOCIALS
 .fb-post {
