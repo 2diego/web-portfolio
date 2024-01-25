@@ -402,6 +402,14 @@ a {
 .fb-post {
 	overflow: hidden;
 	margin-top: 2rem;
+	max-width: 98%;
+}
+
+@media (max-width: $lg) {
+	.ig-mobile {
+		width: -webkit-fill-available; 
+		text-align: -webkit-center;
+	}
 }
 
 //Footer
