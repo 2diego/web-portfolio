@@ -365,6 +365,17 @@ a {
 	font-size: 30px;
 	opacity: 0.5;
 }
+
+.slick-dots li button:before {
+	color: $black !important;
+	font-size: 1rem !important;
+	opacity: 0.5;
+}
+
+.slick-dots li button:after {
+	opacity: 1;
+}
+
 // PRODUCTS 
 .product-item {
     margin: 5px !important;

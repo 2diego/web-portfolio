@@ -338,6 +338,16 @@ a.more {
   opacity: 0.5;
 }
 
+.slick-dots li button:before {
+  color: #000000 !important;
+  font-size: 1rem !important;
+  opacity: 0.5;
+}
+
+.slick-dots li button:after {
+  opacity: 1;
+}
+
 .product-item {
   margin: 5px !important;
 }
