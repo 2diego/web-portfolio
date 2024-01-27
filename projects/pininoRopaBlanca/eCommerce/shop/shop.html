@@ -1,0 +1,373 @@
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pinino Blanqueria</title>
+    <!-- <link rel="icon" href="img/favicon.png"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> <!---->
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css"> <!---->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- price Rangs CSS -->
+    <link rel="stylesheet" href="css/price_rangs.css"> <!---->
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css"> <!---->
+    <!-- Isotope CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
+    <style>
+      .single_product_item img {
+          max-height: 15em;
+      }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+            
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="../images/pininoRopaBlanca.svg"/></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsFurni">
+        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item active"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li><a class="nav-link" href="shop.html">Tienda</a></li>
+            <li><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+
+        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <li><a class="nav-link" href="#"><img src="../images/user.svg"></a></li>
+            <li><a class="nav-link" href="cart.html"><img src="../images/cart.svg"></a></li>
+        </ul>
+        </div>
+      </div>
+        
+    </nav>
+    <!-- End Header/Navigation -->
+    
+    <!--================Category Product Area =================-->
+    <section class="cat_product_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left_sidebar_area">
+                        <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                              <button class="btn" data-bs-toggle="collapse" data-bs-target="#catalogos-collapse" aria-expanded="true" aria-controls="#catalogos-collapse">
+                                <h3>Catálogos</h3>
+                              </button>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list collapse" id="catalogos-collapse">
+                                    <li>
+                                      <a class="filter-btn" data-filter="*">Mostrar todos</a>
+                                      <span>(39)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-jeanCartier">Jean Cartier Otoño-Invierno</a>
+                                        <span>(7)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-etiquetaBlancaOI">Etiqueta Blanca Otoño-Invierno</a>
+                                        <span>(11)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-etiquetaBlanca2022">Etiqueta Blanca Colección 2022</a>
+                                        <span>(9)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-mueble">Muebles</a>
+                                        <span>(12)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                              <button class="btn" data-bs-toggle="collapse" data-bs-target="#productos-collapse" aria-expanded="true" aria-controls="#productos-collapse">
+                                <h3>Productos</h3>
+                              </button>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list collapse"  id="productos-collapse">
+                                    <li>
+                                      <a class="filter-btn" data-filter="*">Mostrar todos</a>
+                                      <span>(54)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-acolchado">Acolchados</a>
+                                        <span>(9)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-cubrecama">Cubrecamas</a>
+                                        <span>(12)</span>
+                                    </li>
+                                    <li class="active">
+                                        <a class="filter-btn" data-filter=".filter-mueble">Muebles</a>
+                                        <span>(5)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-sabana">Sabanas</a>
+                                        <span>(16)</span>
+                                    </li>
+                                    <li>
+                                        <a class="filter-btn" data-filter=".filter-toallon">Toallones</a>
+                                        <span>(12)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                       
+
+                        <aside class="left_widgets p_filter_widgets price_rangs_aside">
+                            <div class="l_w_title">
+                                <h3>Filtrar por precio</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <div class="range_item">
+                                    <div id="slider-range"></div> 
+                                    <input type="text" class="js-range-slider" value="" />
+                                    <div class="d-flex">
+                                        <div class="price_text">
+                                            <p>Precio :</p>
+                                        </div>
+                                        <div class="price_value d-flex justify-content-center">
+                                            <input type="text" class="js-input-from" id="amount" readonly />
+                                            <span>to</span>
+                                            <input type="text" class="js-input-to" id="amount" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product_top_bar d-flex justify-content-between align-items-center">
+                                <div class="single_product_menu d-flex">
+                                    <h5>Ordenar por: </h5>
+                                    <select>
+                                        <option data-display="Seleccionar">Precio</option>
+                                        <option value="1">Nombre</option>
+                                        <option value="2">Producto</option>
+                                    </select>
+                                </div>
+                                <div class="single_product_menu d-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Buscar"
+                                            aria-describedby="inputGroupPrepend">
+                                        <div class="input-group-prepend align-self-end">
+                                            <span class="input-group-text" id="inputGroupPrepend">
+                                              <i class="ti-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRODUCTOS -->
+                    <div class="row align-items-center latest_product_inner">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta">
+                            <div class="single_product_item">
+                                <img src="../images/products/acolchado1.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Acolchado</h4>
+                                    <br>
+                                    <h3>$15000.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta">
+                            <div class="single_product_item">
+                                <img src="../images/products/acolchado2.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Acolchado</h4>
+                                    <br>
+                                    <h3>$18000.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-jeanCartier">
+                            <div class="single_product_item">
+                                <img src="../images/jeanCartier.png" alt="">
+                                <div class="single_product_text">
+                                    <h4>Acolchado <br> Jean Cartier</h4>
+                                    <h3>$21000.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama">
+                            <div class="single_product_item">
+                                <img src="../images/products/cubrecamas1.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Cubrecamas Boca</h4>
+                                    <br>
+                                    <h3>$50000.00</h3>
+                                    <a href="#" class="add_cart">SIN STOCK<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama">
+                            <div class="single_product_item">
+                                <img src="../images/products/cubrecamas2.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Cubrecamas River</h4>
+                                    <h6>Ideal para verano</h6>
+                                    <h3>$15.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-sabana">
+                            <div class="single_product_item">
+                                <img src="../images/products/sabanas1.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Juego de sabanas</h4>
+                                    <br>
+                                    <h3>$12500.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlanca2022">
+                            <div class="single_product_item">
+                                <img src="../images/etiqueta-blanca-2022.png" alt="">
+                                <div class="single_product_text">
+                                    <h4>Toallones <br> Etiqueta Blanca</h4>
+                                    <h3>$11999.99</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlancaOI">
+                            <div class="single_product_item">
+                                <img src="../images/Etiqueta-Blanca-Invierno-2022.png" alt="">
+                                <div class="single_product_text">
+                                    <h4>Toallones <br> Etiqueta Blanca</h4>
+                                    <h3>$10500.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon">
+                            <div class="single_product_item">
+                                <img src="../images/products/toallones2.jpg" alt="">
+                                <div class="single_product_text">
+                                    <h4>Toallones</h4>
+                                    <br>
+                                    <h3>$11500.00</h3>
+                                    <a href="#" class="add_cart">+ Agregar al carro<i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-12">
+                            <div class="pagination">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <i class="ti-angle-double-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <i class="ti-angle-double-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Category Product Area =================-->
+
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+        <div class="container relative">
+  
+          <div class="d-flex pininoFooter">
+            <img src="../images/pininoRopaBlanca.svg" alt="Image" class="img-fluid">
+        <div class="contacto">
+        <p class="mt-2 ms-3" style="color: white !important">Contáctanos</p>
+        <p class="ms-5" style="color: white !important">(XXXX) XXXX - XXXX</p>
+  
+        </div>
+      </div>
+  
+          <div class="border-top copyright">
+            <div class="row pt-4">
+              <p class="text-end" style="color: white !important">Developer&mdash; Diego Maldonado</p>
+            </div>
+          </div>
+  
+        </div>
+      </footer>
+      <!-- End Footer Section -->	
+    
+
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script> <!---->
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script> <!---->
+    <!-- nice select js -->
+    <script src="js/owl.carousel.min.js"></script> <!---->
+    <script src="js/jquery.nice-select.min.js"></script> <!---->
+    <!-- Price Rangs JS-->
+    <script src="js/price_rangs.js"></script> <!---->
+    <!-- custom js -->
+    <script src="js/custom.js"></script> <!---->
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Initialize Isotope
+        $('.latest_product_inner').isotope({
+          itemSelector: '.filter-item',
+          layoutMode: 'fitRows'
+        });
+    
+        // Filtering function
+        $('.filter-btn').on('click', function () {
+          var filterValue = $(this).attr('data-filter');
+          $('.latest_product_inner').isotope({ filter: filterValue });
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
