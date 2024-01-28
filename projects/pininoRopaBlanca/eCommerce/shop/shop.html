@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
     <style>
       .single_product_item img {
-          max-height: 15em;
+          display: block;
+          max-width: 80%;
+          margin: auto;
       }
     </style>
 </head>
@@ -42,8 +44,8 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarsFurni">
         <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item active"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li><a class="nav-link" href="shop.html">Tienda</a></li>
+            <li><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item active"><a class="nav-link" href="shop.html">Tienda</a></li>
             <li><a class="nav-link" href="#">Contacto</a></li>
         </ul>
 
@@ -70,26 +72,26 @@
                               </button>
                             </div>
                             <div class="widgets_inner">
-                                <ul class="list collapse" id="catalogos-collapse">
+                                <ul class="list show" id="catalogos-collapse">
                                     <li>
                                       <a class="filter-btn" data-filter="*">Mostrar todos</a>
-                                      <span>(39)</span>
+                                      <span>(3)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-jeanCartier">Jean Cartier Otoño-Invierno</a>
-                                        <span>(7)</span>
+                                        <span>(1)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-etiquetaBlancaOI">Etiqueta Blanca Otoño-Invierno</a>
-                                        <span>(11)</span>
+                                        <span>(1)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-etiquetaBlanca2022">Etiqueta Blanca Colección 2022</a>
-                                        <span>(9)</span>
+                                        <span>(1)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-mueble">Muebles</a>
-                                        <span>(12)</span>
+                                        <span>(0)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -102,30 +104,30 @@
                               </button>
                             </div>
                             <div class="widgets_inner">
-                                <ul class="list collapse"  id="productos-collapse">
+                                <ul class="list show"  id="productos-collapse">
                                     <li>
                                       <a class="filter-btn" data-filter="*">Mostrar todos</a>
-                                      <span>(54)</span>
+                                      <span>(9)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-acolchado">Acolchados</a>
-                                        <span>(9)</span>
+                                        <span>(3)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-cubrecama">Cubrecamas</a>
-                                        <span>(12)</span>
+                                        <span>(2)</span>
                                     </li>
                                     <li class="active">
                                         <a class="filter-btn" data-filter=".filter-mueble">Muebles</a>
-                                        <span>(5)</span>
+                                        <span>(0)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-sabana">Sabanas</a>
-                                        <span>(16)</span>
+                                        <span>(1)</span>
                                     </li>
                                     <li>
                                         <a class="filter-btn" data-filter=".filter-toallon">Toallones</a>
-                                        <span>(12)</span>
+                                        <span>(3)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -183,7 +185,7 @@
                         </div>
                     </div>
                     <!-- PRODUCTOS -->
-                    <div class="row align-items-center latest_product_inner">
+                    <div class="row latest_product_inner" style="text-align-last: center;">
                         <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta">
                             <div class="single_product_item">
                                 <img src="../images/products/acolchado1.jpg" alt="">
@@ -208,7 +210,7 @@
                         </div>
                         <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-jeanCartier">
                             <div class="single_product_item">
-                                <img src="../images/jeanCartier.png" alt="">
+                                <img src="../images/jeanCartier.png" alt="" style="max-width: 67%;">
                                 <div class="single_product_text">
                                     <h4>Acolchado <br> Jean Cartier</h4>
                                     <h3>$21000.00</h3>
@@ -240,7 +242,7 @@
                         </div>
                         <div class="col-lg-4 col-sm-6 filter-item filter-sabana">
                             <div class="single_product_item">
-                                <img src="../images/products/sabanas1.jpg" alt="">
+                                <img src="../images/products/sabanas1.jpg" alt=""  style="max-width: 78%;">
                                 <div class="single_product_text">
                                     <h4>Juego de sabanas</h4>
                                     <br>
@@ -271,7 +273,7 @@
                         </div>
                         <div class="col-lg-4 col-sm-6 filter-item filter-toallon">
                             <div class="single_product_item">
-                                <img src="../images/products/toallones2.jpg" alt="">
+                                <img src="../images/products/toallones2.jpg" alt=""  style="max-width: 79%;">
                                 <div class="single_product_text">
                                     <h4>Toallones</h4>
                                     <br>
