@@ -15,12 +15,8 @@
     <!-- nice select CSS -->
     <link rel="stylesheet" href="css/nice-select.css"> <!---->
     <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- price Rangs CSS -->
-    <link rel="stylesheet" href="css/price_rangs.css"> <!---->
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css"> <!---->
-    <!-- Isotope CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
     <style>
       .single_product_item img {
           display: block;
@@ -36,7 +32,7 @@
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
             
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="../images/pininoRopaBlanca.svg"/></a>
+        <a class="navbar-brand" href="../index.html"><img src="../images/pininoRopaBlanca.svg"/></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -132,30 +128,6 @@
                                 </ul>
                             </div>
                         </aside>
-
-                       
-
-                        <aside class="left_widgets p_filter_widgets price_rangs_aside">
-                            <div class="l_w_title">
-                                <h3>Filtrar por precio</h3>
-                            </div>
-                            <div class="widgets_inner">
-                                <div class="range_item">
-                                    <div id="slider-range"></div> 
-                                    <input type="text" class="js-range-slider" value="" />
-                                    <div class="d-flex">
-                                        <div class="price_text">
-                                            <p>Precio :</p>
-                                        </div>
-                                        <div class="price_value d-flex justify-content-center">
-                                            <input type="text" class="js-input-from" id="amount" readonly />
-                                            <span>to</span>
-                                            <input type="text" class="js-input-to" id="amount" readonly />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -163,17 +135,16 @@
                         <div class="col-lg-12">
                             <div class="product_top_bar d-flex justify-content-between align-items-center">
                                 <div class="single_product_menu d-flex">
-                                    <h5>Ordenar por: </h5>
-                                    <select>
-                                        <option data-display="Seleccionar">Precio</option>
-                                        <option value="1">Nombre</option>
-                                        <option value="2">Producto</option>
+                                    <h5>Ordenar: </h5>
+                                    <select id="priceSort" onchange="sortProducts()">
+                                        <option value="default">A-Z</option>
+                                        <option value="asc">Precio ascendente</option>
+                                        <option value="desc">Precio descendente</option>
                                     </select>
                                 </div>
                                 <div class="single_product_menu d-flex">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Buscar"
-                                            aria-describedby="inputGroupPrepend">
+                                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar" aria-describedby="inputGroupPrepend" oninput="filterProducts()">
                                         <div class="input-group-prepend align-self-end">
                                             <span class="input-group-text" id="inputGroupPrepend">
                                               <i class="ti-search"></i>
@@ -185,8 +156,8 @@
                         </div>
                     </div>
                     <!-- PRODUCTOS -->
-                    <div class="row latest_product_inner" style="text-align-last: center;">
-                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta">
+                    <div class="row latest_product_inner isotope-container" style="text-align-last: center;" id="productContainer">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta" data-price="15000">
                             <div class="single_product_item">
                                 <img src="../images/products/acolchado1.jpg" alt="">
                                 <div class="single_product_text">
@@ -197,7 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-oferta" data-price="18000">
                             <div class="single_product_item">
                                 <img src="../images/products/acolchado2.jpg" alt="">
                                 <div class="single_product_text">
@@ -208,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-jeanCartier">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-acolchado filter-jeanCartier" data-price="21000">
                             <div class="single_product_item">
                                 <img src="../images/jeanCartier.png" alt="" style="max-width: 67%;">
                                 <div class="single_product_text">
@@ -218,7 +189,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama" data-price="50000">
                             <div class="single_product_item">
                                 <img src="../images/products/cubrecamas1.jpg" alt="">
                                 <div class="single_product_text">
@@ -229,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-cubrecama" data-price="15">
                             <div class="single_product_item">
                                 <img src="../images/products/cubrecamas2.jpg" alt="">
                                 <div class="single_product_text">
@@ -240,7 +211,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-sabana">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-sabana" data-price="12500">
                             <div class="single_product_item">
                                 <img src="../images/products/sabanas1.jpg" alt=""  style="max-width: 78%;">
                                 <div class="single_product_text">
@@ -251,7 +222,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlanca2022">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlanca2022" data-price="11999.99">
                             <div class="single_product_item">
                                 <img src="../images/etiqueta-blanca-2022.png" alt="">
                                 <div class="single_product_text">
@@ -261,7 +232,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlancaOI">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon filter-etiquetaBlancaOI" data-price="10500">
                             <div class="single_product_item">
                                 <img src="../images/Etiqueta-Blanca-Invierno-2022.png" alt="">
                                 <div class="single_product_text">
@@ -271,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon">
+                        <div class="col-lg-4 col-sm-6 filter-item filter-toallon" data-price="11500">
                             <div class="single_product_item">
                                 <img src="../images/products/toallones2.jpg" alt=""  style="max-width: 79%;">
                                 <div class="single_product_text">
@@ -348,27 +319,102 @@
     <!-- nice select js -->
     <script src="js/owl.carousel.min.js"></script> <!---->
     <script src="js/jquery.nice-select.min.js"></script> <!---->
-    <!-- Price Rangs JS-->
-    <script src="js/price_rangs.js"></script> <!---->
-    <!-- custom js -->
-    <script src="js/custom.js"></script> <!---->
     <!-- Isotope JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script>
-      $(document).ready(function () {
+<script>
+    $(document).ready(function () {
         // Initialize Isotope
-        $('.latest_product_inner').isotope({
-          itemSelector: '.filter-item',
-          layoutMode: 'fitRows'
+        $('.isotope-container').isotope({
+            itemSelector: '.filter-item',
+            layoutMode: 'fitRows'
         });
-    
+
         // Filtering function
         $('.filter-btn').on('click', function () {
-          var filterValue = $(this).attr('data-filter');
-          $('.latest_product_inner').isotope({ filter: filterValue });
+            var filterValue = $(this).attr('data-filter');
+            $('.isotope-container').isotope({ filter: filterValue });
         });
-      });
-    </script>
+    });
+
+    // niceSelect js code
+  $(document).ready(function () {
+    $('select').niceSelect();
+  });
+</script>
+<script>
+    function filterProducts() {
+        var searchInput = document.getElementById('searchInput');
+        var filter = searchInput.value.toUpperCase();
+        var products = document.querySelectorAll('.filter-item');
+
+        // Convert NodeList to array and sort
+        var sortedProducts = Array.from(products).sort(function (a, b) {
+            var nameA = a.querySelector('.single_product_text h4').textContent.toUpperCase();
+            var nameB = b.querySelector('.single_product_text h4').textContent.toUpperCase();
+
+            if (filter !== '' && nameA.includes(filter)) {
+                return -1;  // A comes first
+            } else if (filter !== '' && nameB.includes(filter)) {
+                return 1;   // B comes first
+            } else {
+                return 0;   // No change in order
+            }
+        });
+
+        // Clear and re-append products
+        var productsContainer = document.getElementById('productContainer');
+        productsContainer.innerHTML = '';
+        sortedProducts.forEach(function (sortedProduct) {
+            var productName = sortedProduct.querySelector('.single_product_text h4').textContent.toUpperCase();
+
+            if (filter === '' || productName.includes(filter)) {
+                sortedProduct.style.display = '';
+            } else {
+                sortedProduct.style.display = 'none';
+            }
+
+            productsContainer.appendChild(sortedProduct);
+        });
+
+        // Update Isotope after updating products
+        $('.isotope-container').isotope('layout');
+    }
+</script>
+<script>
+    function sortProducts() {
+        var priceSort = document.getElementById('priceSort');
+        var sortOrder = priceSort.value;
+
+        var productsContainer = $('.isotope-container');
+
+        if (sortOrder === 'default') {
+            // Sort by product name (A to Z)
+            var sortedProducts = $('.filter-item').sort(function (a, b) {
+                var nameA = $(a).find('.single_product_text h4').text().toUpperCase();
+                var nameB = $(b).find('.single_product_text h4').text().toUpperCase();
+                return nameA.localeCompare(nameB);
+            });
+        } else {
+            // Sort by price
+            var sortedProducts = $('.filter-item').sort(function (a, b) {
+                var priceA = parseFloat($(a).data('price'));
+                var priceB = parseFloat($(b).data('price'));
+
+                if (sortOrder === 'asc') {
+                    return priceA - priceB;
+                } else {
+                    return priceB - priceA;
+                }
+            });
+        }
+
+        // Clear and re-append products
+        productsContainer.isotope('destroy').html(sortedProducts).isotope({
+            itemSelector: '.filter-item',
+            layoutMode: 'fitRows'
+        });
+    }
+</script>
 
   </body>
 

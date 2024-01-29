@@ -130,40 +130,6 @@
     });
   }
 
-
-  //single banner slider
-  $('.banner_slider').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-    function pad2(number) {
-      return (number < 10 ? '0' : '') + number
-    }
-    var carousel = e.relatedTarget;
-    $('.slider-counter').text(pad2(carousel.current()));
-
-  }).owlCarousel({
-    items: 1,
-    loop: true,
-    dots: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplayTimeout: 5000,
-    nav: true,
-    navText: ["next", "previous"],
-    smartSpeed: 1000,
-    responsive: {
-      0: {
-        nav: false
-      },
-      600: {
-        nav: false
-      },
-      768: {
-        nav: true
-      }
-    }
-  });
-
-
-
   // niceSelect js code
   $(document).ready(function () {
     $('select').niceSelect();
@@ -178,51 +144,6 @@
   //     $('.main_menu').removeClass('menu_fixed animated fadeInDown');
   //   }
   // });
-
-
-  $('.counter').counterUp({
-    time: 2000
-  });
-
-  $('.slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    speed: 300,
-    infinite: true,
-    asNavFor: '.slider-nav-thumbnails',
-    autoplay: true,
-    pauseOnFocus: true,
-    dots: true,
-  });
-
-  $('.slider-nav-thumbnails').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider',
-    focusOnSelect: true,
-    infinite: true,
-    prevArrow: false,
-    nextArrow: false,
-    centerMode: true,
-    responsive: [{
-      breakpoint: 480,
-      settings: {
-        centerMode: false,
-      }
-    }]
-  });
-
-
-  // Search Toggle
-  $("#search_input_box").hide();
-  $("#search_1").on("click", function () {
-    $("#search_input_box").slideToggle();
-    $("#search_input").focus();
-  });
-  $("#close_search").on("click", function () {
-    $('#search_input_box').slideUp(500);
-  });
 
   //------- Mailchimp js --------//  
   function mailChimp() {
@@ -263,63 +184,12 @@
     $("#seconds").html("<span>Seconds</span>" + seconds);
 
   }
-// click counter js
-(function() {
- 
-  window.inputNumber = function(el) {
 
-    var min = el.attr('min') || false;
-    var max = el.attr('max') || false;
-
-    var els = {};
-
-    els.dec = el.prev();
-    els.inc = el.next();
-
-    el.each(function() {
-      init($(this));
-    });
-
-    function init(el) {
-
-      els.dec.on('click', decrement);
-      els.inc.on('click', increment);
-
-      function decrement() {
-        var value = el[0].value;
-        value--;
-        if(!min || value >= min) {
-          el[0].value = value;
-        }
-      }
-
-      function increment() {
-        var value = el[0].value;
-        value++;
-        if(!max || value <= max) {
-          el[0].value = value++;
-        }
-      }
-    }
-  }
-})();
-
-inputNumber($('.input-number'));
-
-
-
-  setInterval(function () {
-    makeTimer();
-  }, 1000);
-
-  // click counter js
 
 
   // var a = 0;
   // $('.increase').on('click', function(){
-     
-    
-
+  
   //   console.log(  $(this).innerHTML='Product Count: '+ a++ );
   // });
 

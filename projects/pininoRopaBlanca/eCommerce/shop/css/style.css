@@ -460,64 +460,6 @@ button:focus,
   border-bottom: 1px solid #ddd;
 }
 
-/* Price filter */
-.price_value input {
-  border: 0px;
-  text-align: center;
-  max-width: 30px;
-  margin-bottom: auto;
-}
-
-.price_value span {
-  margin: 0 5px 0 5px;
-}
-
-.irs-to,
-.irs-from,
-.irs-max,
-.irs-min {
-  display: none;
-}
-
-.price_rangs_aside .l_w_title h3 {
-  line-height: 20px;
-  margin-bottom: 0px;
-}
-
-.irs-bar {
-  height: 6px;
-  top: 33px;
-  border-top: 1px solid #ff3368;
-  border-bottom: 1px solid #ff3368;
-  background: #ff3368;
-  background: linear-gradient(to top, #ff3368 0%, #ff3368 100%);
-}
-
-.irs-line {
-  height: 6px;
-  top: 33px;
-  background: #e8eff1;
-  background: linear-gradient(to bottom, #e8eff1 -50%, #e8eff1 150%);
-  border: 1px solid #e8eff1;
-  border-radius: 16px;
-  -moz-border-radius: 16px;
-}
-
-.irs-slider {
-  height: 15px;
-  width: 15px;
-  border: 1px solid #ff3368;
-  background-color: #ff3368;
-  background: linear-gradient(to bottom, #ff3368 0%, #ff3368 20%, #ff3368 100%);
-  top: 28px;
-  box-shadow: none;
-}
-
-.irs-single {
-  visibility: hidden !important;
-}
-/* End price filter*/
-
 /* End Product Sidebar */
 
 /* NAV BAR */
@@ -617,4 +559,8 @@ button:focus,
   font-weight: 400 !important;
   font-size: 14px !important;
   margin-bottom: 1rem;
+}
+
+.hide {
+  display: none;
 }
