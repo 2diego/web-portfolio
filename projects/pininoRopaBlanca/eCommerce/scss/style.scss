@@ -386,10 +386,15 @@ a {
 }
 
 //SHOP
-.wrapper{
-	width:100%;
-	text-align:center;
+.shop-section {
+	margin-bottom: 7rem;
 }
+
+.shop-start {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
 .carouselShop{
 	width:85%;
 	margin:0px auto;
@@ -438,17 +443,32 @@ a {
 
 
 //SOCIALS
-.fb-post {
-	overflow: hidden;
-	margin-top: 2rem;
-	max-width: 98%;
+.socials-section {
+	background-color: white;
 }
 
-@media (max-width: $lg) {
-	.ig-mobile {
-		width: -webkit-fill-available; 
-		text-align: -webkit-center;
+.social-wall {
+	 max-width: 60%;
+}
+
+.social-wall {
+	@media (max-width:1850px) {
+		max-width: 70%;
 	}
+}
+
+.social-wall {
+	@media (min-width: 2440px) {
+		max-width: 45%;
+		}
+}
+
+.ig-mobile,
+.fb-post {
+	border: solid white;
+	margin: -0.5rem;
+	margin-left: 0.5rem !important;
+	margin-right: 0.5rem !important;
 }
 
 //Footer

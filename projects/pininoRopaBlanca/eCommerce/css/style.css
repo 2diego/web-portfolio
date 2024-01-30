@@ -356,9 +356,13 @@ a.more {
   text-align: -webkit-center;
 }
 
-.wrapper {
-  width: 100%;
-  text-align: center;
+.shop-section {
+  margin-bottom: 7rem;
+}
+
+.shop-start {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .carouselShop {
@@ -404,18 +408,34 @@ a.more {
     width: 7rem;
   }
 }
-.fb-post {
-  overflow: hidden;
-  margin-top: 2rem;
-  max-width: 98%;
+.socials-section {
+  background-color: white;
 }
 
-@media (max-width: 992px) {
-  .ig-mobile {
-    width: -webkit-fill-available;
-    text-align: -webkit-center;
+.social-wall {
+  max-width: 60%;
+}
+
+@media (max-width: 1850px) {
+  .social-wall {
+    max-width: 70%;
   }
 }
+
+@media (min-width: 2440px) {
+  .social-wall {
+    max-width: 45%;
+  }
+}
+
+.ig-mobile,
+.fb-post {
+  border: solid white;
+  margin: -0.5rem;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+
 .footer-section {
   background-color: #3b5d50;
   color: #ffffff;
