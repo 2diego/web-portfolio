@@ -116,7 +116,7 @@ a:active {
       display: flex;
       flex-direction: column;
       width: 17rem;
-      height: 100vh;
+      height: 100%;
     }
   
     #sideNav .navbar-brand {
